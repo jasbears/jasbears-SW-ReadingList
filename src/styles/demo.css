@@ -1,0 +1,43 @@
+.container {
+  overflow: auto;
+  margin-top: 20px;
+  padding: 5px;
+}
+.card {
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+}
+#navlogob {
+  width: 100px;
+  height: 50px;
+  margin-left: 50px;
+  padding: 5px;
+}
+#navbtn {
+  margin-right: 50px;
+  padding: 10px;
+}
+h1 {
+  text-decoration: underline;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+p {
+  color: red;
+  font-weight: bolder;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+h3 {
+  text-decoration: underline;
+}
+.card-img-top {
+  width: 100%;
+}
+#mytag {
+  text-decoration: none;
+  color: blueviolet;
+}
+#mytag:hover {
+  color: green;
+}
