@@ -20,24 +20,30 @@ export const Character_Cards = () => {
             <div className="card">
               <div>
                 <img src={swlogo} className="card-img-top" />
-                <h3 className="card-title text-center p-3">
+                <h3 className="card-title text-center p-1">
                   {" "}
                   {character.name}{" "}
                 </h3>
                 <div className="card-body">
-                  <p className="card-text m-1">
-                    Gender: {character.gender} <br />
-                    Hair Color: {character.hair_color} <br />
-                    Eye Color:{character.eye_color} <br />
-                    Height: {character.height}
-                  </p>
+                  <ul className="card-text">
+                    <li>Gender: {character.gender}</li>
+                    <li>Hair Color: {character.hair_color} </li>
+                    <li>Eye Color:{character.eye_color}</li>
+                    <li>Height: {character.height}</li>
+                  </ul>
                 </div>
                 <div className="card-btns text-center p-2 m-3">
-                  <a href="#" className="btn btn-primary btn-lg">
-                    Learn More
-                  </a>{" "}
+                  <Link to={"/characters/" + character.url.match(/\d+/)[0]}>
+                    <a href="#" className="btn btn-warning btn-lg">
+                      Learn More
+                    </a>
+                  </Link>{" "}
                   <span />
-                  <a href="#" className="btn btn-danger btn-lg">
+                  <a
+                    href="#"
+                    className="btn btn-danger btn-lg"
+                    onClick={() => actions.addFavorite(character)}
+                  >
                     <i class="bi bi-heart"></i>
                   </a>
                 </div>

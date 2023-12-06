@@ -18,6 +18,9 @@
   margin-right: 50px;
   padding: 10px;
 }
+li {
+  list-style: none;
+}
 h1 {
   text-decoration: underline;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
