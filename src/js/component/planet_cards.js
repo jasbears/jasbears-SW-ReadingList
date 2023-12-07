@@ -29,11 +29,17 @@ export const Planet_Cards = () => {
                   </p>
                 </div>
                 <div className="card-btns text-center p-2 m-3">
-                  <a href="#" className="btn btn-primary btn-lg">
-                    Learn More
-                  </a>{" "}
+                  <Link to={"/planets/" + planet.url.match(/\d+/)[0]}>
+                    <a href="#" className="btn btn-warning btn-lg">
+                      Learn More
+                    </a>
+                  </Link>{" "}
                   <span />
-                  <a href="#" className="btn btn-danger btn-lg">
+                  <a
+                    href="#"
+                    className="btn btn-danger btn-lg"
+                    onClick={() => actions.addFavorite(planet)}
+                  >
                     <i class="bi bi-heart"></i>
                   </a>
                 </div>

@@ -7,6 +7,11 @@ body {
   padding: 5px;
   background-color: black;
 }
+#card-desc {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
 .card {
   width: 25rem;
   display: flex;
@@ -29,6 +34,10 @@ h1 {
   text-decoration: underline;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
+.dropdown,
+.dropdown-menu {
+  position: relative;
+}
 p {
   color: red;
   font-weight: bolder;
@@ -40,6 +49,13 @@ h3 {
 }
 .card-img-top {
   width: 100%;
+}
+.card-img-top-des {
+  width: 50%;
+  margin: 0 auto;
+  border-style: dotted;
+  border-width: 10px;
+  border-radius: 10px;
 }
 #mytag {
   text-decoration: none;

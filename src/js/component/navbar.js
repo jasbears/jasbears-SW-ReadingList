@@ -11,25 +11,35 @@ export const Navbar = () => {
 
   return (
     <div className="container">
-      <nav className="navbar navbar-light bg-light mb-3">
+      <nav className="navbar navbar-light bg-warning mb-3">
         <Link to="/">
           <img id="navlogob" src={navlogo} />
         </Link>
-        <div className="ml-auto">
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link
-              dropdown-toggle"
-              href="/"
-              id="favnavbtn"
-              role="button"
+        <div className="ml-auto m-4">
+          <div className="dropdown">
+            <button
+              className="btn btn-danger dropdown-toggle"
+              type="button"
               data-bs-toggle="dropdown"
-              aria-expanded="false"
+              aria-expanded="true"
             >
-              {" "}
-              Favorites
-            </a>
-          </li>
+              Favorites <i class="bi bi-star-fill"></i>
+            </button>
+            <ul
+              className="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              {store.favorites.map((item, index) => (
+                <li key={index} className="mx-2 mb-3">
+                  {item.name}
+                  <i
+                    class="bi bi-trash3"
+                    onClick={() => actions.filterFavorites.map(item)}
+                  ></i>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </nav>
     </div>

@@ -4,20 +4,20 @@ import { useParams } from "react-router";
 import "../../styles/demo.css";
 import swlogodes from "../../img/starwar-logo-white.png";
 
-export const Person = () => {
+export const Planet = () => {
   const { id } = useParams();
   const { store, actions } = useContext(Context);
 
   useEffect(() => {
     console.log(id);
-    actions.getPerson(`https://swapi.dev/api/people/${id}/`);
+    actions.getPlanet(`https://swapi.dev/api/planets/${id}/`);
   }, []);
 
   return (
     <div className="container">
       <div className="card" id="card-desc">
         <div className="card-header text-center">
-          <h1> {!!store.person && store.person.name} </h1>
+          <h1> {!!store.planet && store.planet.name} </h1>
         </div>
         <img src={swlogodes} className="card-img-top-des" id="swlogodes" />
         <div className="card-body text-center">
@@ -32,10 +32,9 @@ export const Person = () => {
             laborum.
           </p>
           <ul className="card-text text-primary text-uppercase">
-            <li>Gender: {!!store.person && store.person.gender}</li>
-            <li>Hair Color: {!!store.person && store.person.hair_color} </li>
-            <li>Eye Color:{!!store.person && store.person.eye_color}</li>
-            <li>Height: {!!store.person && store.person.height}</li>
+            <li>Climate: {!!store.planet && store.planet.climate}</li>
+            <li>Terrain: {!!store.planet && store.planet.terrain} </li>
+            <li>Population:{!!store.planet && store.planet.population}</li>
           </ul>
         </div>
       </div>

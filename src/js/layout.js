@@ -13,6 +13,7 @@ import { Footer } from "./component/footer";
 import { Character_Cards } from "./component/person_cards";
 import { Planet_Cards } from "./component/planet_cards";
 import { Person } from "./component/person_desc";
+import { Planet } from "./component/planet_desc";
 
 //create your first component
 const Layout = () => {
@@ -28,6 +29,7 @@ const Layout = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/characters/:id" element={<Person />} />
+            <Route path="/planets/:id" element={<Planet />} />
             <Route
               path="*"
               element={<h1 className="text-center">Not found!</h1>}
