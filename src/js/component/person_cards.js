@@ -29,7 +29,7 @@ export const Character_Cards = () => {
                     <li>Gender: {character.gender}</li>
                     <li>Hair Color: {character.hair_color} </li>
                     <li>Eye Color:{character.eye_color}</li>
-                    <li>Height: {character.height}</li>
+                    <li>Height: {character.height} cm</li>
                   </ul>
                 </div>
                 <div className="card-btns text-center p-2 m-3">

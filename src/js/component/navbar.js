@@ -29,20 +29,6 @@ export const Navbar = () => {
               {" "}
               Favorites
             </a>
-            <ul
-              className="dropdown-menu "
-              aria-labelledby="navbarDropdownMenuLink"
-            >
-              {store.favorites.map((item, index) => (
-                <li key={index} className="mx-2  mb-3">
-                  {item.name}
-                  <button
-                    className="btn btn-sm mx-2 btn-outline-warning"
-                    onClick={() => actions.filterFavorites(item)}
-                  ></button>
-                </li>
-              ))}
-            </ul>
           </li>
         </div>
       </nav>
